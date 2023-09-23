@@ -1,8 +1,9 @@
+import { useState } from 'react';
 import { FlatList, HStack, Heading, Text, VStack } from 'native-base';
 
 import { Group } from '@components/Group';
 import { HomeHeader } from '@components/HomeHeader';
-import { useState } from 'react';
+import { ExerciseCard } from '@components/ExerciseCard';
 
 export function Home() {
 
@@ -43,7 +44,8 @@ export function Home() {
           </Text>
         </HStack>
 
-        
+        <ExerciseCard />
+        <ExerciseCard />
       </VStack>
     </VStack>
   );
