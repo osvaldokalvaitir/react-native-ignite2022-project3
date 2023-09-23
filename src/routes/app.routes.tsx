@@ -43,7 +43,7 @@ export function AppRoutes() {
         }
       }}
     >
-      <Screen 
+      {/* <Screen 
         name='home'
         component={Home}
         options={{
@@ -51,7 +51,7 @@ export function AppRoutes() {
             <HomeSvg fill={color} width={iconSize} height={iconSize} />
           )
         }}
-      />
+      /> */}
 
       <Screen 
         name='history'
