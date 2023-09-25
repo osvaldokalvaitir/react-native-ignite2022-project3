@@ -1,5 +1,5 @@
 import { TouchableOpacity } from 'react-native';
-import { Heading, HStack, Icon, Text, VStack } from 'native-base';
+import { Heading, HStack, Icon, Text, VStack, Image } from 'native-base';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -39,6 +39,18 @@ export function Exercise() {
             </Text>
           </HStack>
         </HStack>
+      </VStack>
+
+      <VStack p={8}>
+        <Image
+          w="full"
+          h={80}
+          source={{ uri: 'https://www.origym.com.br/upload/remada-unilateral-3.png' }}
+          alt="Nome do exercício"
+          mb={3}
+          resizeMode="cover"
+          rounded="lg"
+        />
       </VStack>
     </VStack>
   );
