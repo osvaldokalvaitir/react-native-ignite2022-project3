@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { Center, ScrollView, VStack, Skeleton, Text, Heading } from 'native-base';
 import * as ImagePicker from 'expo-image-picker';
+import * as FileSystem from 'expo-file-system';
 
 import { ScreenHeader } from '@components/ScreenHeader';
 import { UserPhoto } from '@components/UserPhoto';
@@ -30,6 +31,9 @@ export function Profile() {
       }
 
       if (photoSelected.assets[0].uri) {
+        const photoInfo = await FileSystem.getInfoAsync(photoSelected.assets[0].uri);
+        console.log(photoInfo);
+
         setUserPhoto(photoSelected.assets[0].uri);
       }  
     } catch (error) {
